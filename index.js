@@ -33,8 +33,11 @@ const tianjiabox = document.querySelector(".tianjiabox")
 const shanchubox = document.querySelector(".shanchubox")
 const fou = document.querySelector(".fou")
 const shi = document.querySelector(".shi")
+const yibaocunbox = document.querySelector(".yibaocunbox")
 let kongxiabiao = null
 let kechengboxxiabiao = null
+let yanshihanshu1 = null
+let yanshihanshu2 = null
 function xuanran() {
     biaoge.querySelectorAll(".kechengbox").forEach(function (d) {
         d.remove()
@@ -105,6 +108,17 @@ tianjiaanniu.addEventListener("click", function () {
     }
     biaodan.style = `display:none;`
     tianjiabox.style = `display:none;`
+    yibaocunbox.style.display = "flex"
+    yibaocunbox.style.opacity = "1"
+    clearTimeout(yanshihanshu1)
+    clearTimeout(yanshihanshu2)
+    yanshihanshu1 = setTimeout(function () {
+        yibaocunbox.style.opacity = "0"
+        yanshihanshu2 = setTimeout(function () {
+            yibaocunbox.style.display = "none"
+            yibaocunbox.style.opacity = "1"
+        }, 300)
+    }, 1000)
 })
 
 shi.addEventListener("click", function () {

@@ -4,7 +4,6 @@ body {
 }
 
 * {
-
     box-sizing: border-box;
 }
 
@@ -14,6 +13,25 @@ body {
     margin: 0 auto;
     border-radius: 10px;
     padding: 20px;
+}
+
+.yibaocunbox {
+    width: 100px;
+    height: 45px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 999;
+    top: 40px;
+    left: 50%;
+    opacity: 1;
+    transition: opacity 0.3s ease;
 }
 
 .biaodan {
@@ -249,7 +267,8 @@ input {
         gap: 20px;
         margin-top: 40px;
     }
-    .shanchubox{
+
+    .shanchubox {
         max-width: 300px;
     }
 }
